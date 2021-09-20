@@ -69,7 +69,6 @@ Set-Content -Path $Requirements (Get-Content -Path $Requirements | Select-String
 ..\VapourSynth\python.exe -m pip install -r $Requirements --no-warn-script-location
 
 
-Copy-Item -Path ..\VapourSynth\release-x64\* -Destination ..\VapourSynth\ -Recurse -Force
 Copy-Item -Path .\vspreview\vapoursynth-preview-R55.A0\vspreview -Destination ..\VapourSynth\Lib\site-packages\ -Recurse -Force
 Copy-Item -Path .\VSRepoGUI\VSRepoGUI.exe -Destination ..\VapourSynth\ -Force
 Copy-Item -Path ..\vsrepogui.json -Destination ..\VapourSynth\ -Force
@@ -79,7 +78,6 @@ New-Item -Path ..\VapourSynth\VapourSynthScripts -ItemType Directory -Force | Ou
 Remove-Item -Path .\7za -Recurse -Force
 Remove-Item -Path .\vspreview -Recurse -Force
 Remove-Item -Path .\VSRepoGUI -Recurse -Force
-Remove-Item -Path ..\VapourSynth\release-x64  -Recurse -Force
 
 Pop-Location
 
