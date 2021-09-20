@@ -44,7 +44,7 @@ DownloadFile -Uri $Packages.getpip.url -OutFile $Packages.getpip.name
 Expand-Archive -Path $Packages.'7za'.name -DestinationPath "7za" -Force
 Expand-Archive -Path $Packages.vspreview.name -DestinationPath vspreview -Force
 Expand-Archive -Path $Packages.vsrepogui.name -DestinationPath VSRepoGUI -Force
-Expand-Archive -Path $Packages.vapoursynth.name -Destination ..\VapourSynth
+Expand7Zip -Path $Packages.vapoursynth.name -Destination ..\VapourSynth
 Expand7Zip -Path $Packages.vseditor.name -Destination ..\VapourSynth\VapourSynthEditor
 
 
@@ -69,7 +69,6 @@ Set-Content -Path $Requirements (Get-Content -Path $Requirements | Select-String
 ..\VapourSynth\python.exe -m pip install -r $Requirements --no-warn-script-location
 
 
-Copy-Item -Path ..\VapourSynth\release-x64\* -Destination ..\VapourSynth\ -Recurse -Force
 Copy-Item -Path .\vspreview\vapoursynth-preview-R55.A0\vspreview -Destination ..\VapourSynth\Lib\site-packages\ -Recurse -Force
 Copy-Item -Path .\VSRepoGUI\VSRepoGUI.exe -Destination ..\VapourSynth\ -Force
 Copy-Item -Path ..\vsrepogui.json -Destination ..\VapourSynth\ -Force
@@ -79,7 +78,6 @@ New-Item -Path ..\VapourSynth\VapourSynthScripts -ItemType Directory -Force | Ou
 Remove-Item -Path .\7za -Recurse -Force
 Remove-Item -Path .\vspreview -Recurse -Force
 Remove-Item -Path .\VSRepoGUI -Recurse -Force
-Remove-Item -Path ..\VapourSynth\release-x64  -Recurse -Force
 
 Pop-Location
 
