@@ -5,14 +5,14 @@
         "hash": "84E830C91A0E8AE499CC4814080DA6569D8A6ACBDDC585C8B62ABC86C809793AEB669B0A741063A379FD281ADE85F120BC27EFEB67D63BF961BE893EEC8BC3B3"
     },
     "python": {
-        "name": "python-3.9.6-embed-amd64.zip",
-        "url": "https://www.python.org/ftp/python/3.9.6/python-3.9.6-embed-amd64.zip",
-        "hash": "f8946471ed7dbc8cbffc72298f99330794b127ce6aa60abc87e80b31bd26099a2f637db85af88ce78c06dcf6e19064184ef3768edf4b1a0f97c25898e379d121"
+        "name": "python-3.9.7-embed-amd64.zip",
+        "url": "https://www.python.org/ftp/python/3.9.7/python-3.9.7-embed-amd64.zip",
+        "hash": "482765de165863f86637591d57141930e2c4ca6e210d0c2569bd0e5fe63157966fb44dea0d5adf249ff15ec9c50cb2dddb704c4ea79369d598f348ee5406f160"
     },
     "vapoursynth": {
-        "name": "VS-C-x64-R55.A2.zip",
-        "url": "https://github.com/AmusementClub/vapoursynth-classic/releases/download/R55.A2/VS-C-x64-R55.A2.zip",
-        "hash": "391e1c8bb13a5c8d3379f96fca24f59ea160667c7ac82f01e21025a4432be8a18ccd43956fac4b01932cfe4922195f8e4f7f5c82b5337095625b1b302efaeec6"
+        "name": "VS-C-x64-R55.A2b.zip",
+        "url": "https://github.com/AmusementClub/vapoursynth-classic/releases/download/R55.A2b/VS-C-x64-R55.A2b.zip",
+        "hash": "9e140b9d98e5725513aee53e8e800acfa10d9ff5938cb84fb04b6128ee1d01b62649778def817bee15711e39ac909a066ffcdf871f9c91ecbe207c95166f091d"
     },
     "vseditor": {
         "name": "VapourSynthEditor-r19-64bit.7z",
