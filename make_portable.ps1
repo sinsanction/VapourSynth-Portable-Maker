@@ -35,6 +35,7 @@ Push-Location -Path .\downloads
 DownloadFile -Uri $Packages.'7za'.url -OutFile $Packages.'7za'.name -Hash $Packages.'7za'.hash
 DownloadFile -Uri $Packages.python.url -OutFile $Packages.python.name -Hash $Packages.python.hash
 DownloadFile -Uri $Packages.vapoursynth.url -OutFile $Packages.vapoursynth.name -Hash $Packages.vapoursynth.hash
+DownloadFile -Uri $Packages.vapoursynth_msk.url -OutFile $Packages.vapoursynth_msk.name -Hash $Packages.vapoursynth_msk.hash
 DownloadFile -Uri $Packages.vseditor.url -OutFile $Packages.vseditor.name -Hash $Packages.vseditor.hash
 DownloadFile -Uri $Packages.vsrepogui.url -OutFile $Packages.vsrepogui.name -Hash $Packages.vsrepogui.hash
 DownloadFile -Uri $Packages.vspreview.url -OutFile $Packages.vspreview.name
@@ -45,6 +46,7 @@ Expand-Archive -Path $Packages.'7za'.name -DestinationPath "7za" -Force
 Expand-Archive -Path $Packages.vspreview.name -DestinationPath vspreview -Force
 Expand-Archive -Path $Packages.vsrepogui.name -DestinationPath VSRepoGUI -Force
 Expand-Archive -Path $Packages.vapoursynth.name -Destination ..\VapourSynth
+Expand-Archive -Path $Packages.vapoursynth_msk.name -Destination ..\VapourSynth -Force
 Expand7Zip -Path $Packages.vseditor.name -Destination ..\VapourSynth\VapourSynthEditor
 
 
@@ -64,12 +66,12 @@ Copy-Item -Path ..\sitecustomize.py -Destination ..\VapourSynth\ -Force
 
 ..\VapourSynth\python.exe .\get-pip.py --no-warn-script-location
 
-$Requirements = Get-Item .\vspreview\vapoursynth-preview-R55.A0\requirements.txt
+$Requirements = Get-Item .\vspreview\vapoursynth-preview-msk-mod-apiv4\requirements.txt
 Set-Content -Path $Requirements (Get-Content -Path $Requirements | Select-String -Pattern 'vapoursynth' -NotMatch )
 ..\VapourSynth\python.exe -m pip install -r $Requirements --no-warn-script-location
 
 
-Copy-Item -Path .\vspreview\vapoursynth-preview-R55.A0\vspreview -Destination ..\VapourSynth\Lib\site-packages\ -Recurse -Force
+Copy-Item -Path .\vspreview\vapoursynth-preview-msk-mod-apiv4\vspreview -Destination ..\VapourSynth\Lib\site-packages\ -Recurse -Force
 Copy-Item -Path .\VSRepoGUI\VSRepoGUI.exe -Destination ..\VapourSynth\ -Force
 Copy-Item -Path ..\vsrepogui.json -Destination ..\VapourSynth\ -Force
 Copy-Item -Path ..\vsedit.config -Destination ..\VapourSynth\VapourSynthEditor\ -Force
