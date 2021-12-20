@@ -5,9 +5,9 @@
         "hash": "84E830C91A0E8AE499CC4814080DA6569D8A6ACBDDC585C8B62ABC86C809793AEB669B0A741063A379FD281ADE85F120BC27EFEB67D63BF961BE893EEC8BC3B3"
     },
     "python": {
-        "name": "python-3.9.7-embed-amd64.zip",
-        "url": "https://www.python.org/ftp/python/3.9.7/python-3.9.7-embed-amd64.zip",
-        "hash": "482765de165863f86637591d57141930e2c4ca6e210d0c2569bd0e5fe63157966fb44dea0d5adf249ff15ec9c50cb2dddb704c4ea79369d598f348ee5406f160"
+        "name": "python-3.9.9-embed-amd64.zip",
+        "url": "https://www.python.org/ftp/python/3.9.9/python-3.9.9-embed-amd64.zip",
+        "hash": "f834e3eff1d36926c47cb84655c5799b4b499a304d8791f4d89802d2c30ef36b6eec96b35d99484b006f0d50bda5db1de77ff9f73de5a71ed391c1742939f02c"
     },
     "vapoursynth": {
         "name": "VS-C-x64-R57.A0.zip",
